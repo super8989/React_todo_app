@@ -10,6 +10,7 @@ class Todo extends Component {
 		this.handleRemove = this.handleRemove.bind(this);
 		this.toggleForm = this.toggleForm.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleUpdate = this.handleUpdate.bind(this);
 	}
 
 	handleRemove() {
@@ -23,6 +24,7 @@ class Todo extends Component {
 	handleUpdate(evt) {
 		evt.preventDefault();
 		//take new task data and pass up to parent
+		this.props.updateTodo(this.props.id, this.state.task);
 	}
 
 	handleChange(evt) {
