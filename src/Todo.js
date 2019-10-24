@@ -68,9 +68,13 @@ class Todo extends Component {
 					>
 						{this.props.task}
 					</li>
-					<div>
-						<button onClick={this.toggleForm}>Edit</button>
-						<button onClick={this.handleRemove}>X</button>
+					<div className='Todo-buttons'>
+						<button onClick={this.toggleForm}>
+							<i class='fas fa-pen' />
+						</button>
+						<button onClick={this.handleRemove}>
+							<i class='fas fa-trash' />
+						</button>
 					</div>
 				</div>
 			);
